@@ -111,12 +111,16 @@
 
         // The difference into years
         let userAge = Math.floor(difference / (365.25 * 24 * 60 * 60 * 1000));
+
         if (userAge < 18 || userAge > 100 || isNaN(birthdate.getTime())) {
             errorMessageVisible(input, errorMessage);
-        false;
+            input.style.border = 'solid 2px red';
+            return false;
+        } else {
+            removeErrorMessage(input);
+            input.style.border = 'solid 2px green';
+            return true;
         }
-        removeErrorMessage(input);
-        return true;
     }
 
     // Check selection of the tournament's city
