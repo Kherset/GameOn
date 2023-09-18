@@ -85,6 +85,7 @@
       const existingErrorField = input.parentNode.querySelector('.error-field');
       if (existingErrorField) {
         existingErrorField.remove();
+        input.style.border = 'solid 2px green'
       }
     }
 
